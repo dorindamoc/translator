@@ -1,0 +1,60 @@
+[versions]
+agp = "8.2.0"
+kotlin = "1.9.20"
+compose = "1.5.4"
+compose-compiler = "1.5.4"
+compose-material3 = "1.1.2"
+androidx-activityCompose = "1.8.2"
+compose-navigation = "2.7.6"
+coil-compose = "2.4.0"
+datetime = "0.4.0"
+hilt = "2.40.5"
+hilt-compiler = "2.40.5"
+ktor = "2.2.1"
+sqldelight = "1.5.5"
+assertk = "0.25"
+turbine = "0.7.0"
+junit = "4.13.2"
+test-runner = "1.5.2"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+
+compose-material = { module= "androidx.compose.material:material", version.ref = "compose" }
+compose-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-navigation = {module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation"}
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt-compiler" }
+hilt-navigation-compose = { module = "com.google.accompanist:hilt-navigation-compose", version.ref = "hilt-compiler" }
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-serialisation-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-serialisation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktor" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+sqldelight = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqlDelightNativeDriver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight-coroutines-extensions = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assertk" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+junit = { module = "junit:junit", version.ref = "junit" }
+test-runner = { module = "androidx.test:runner", version.ref = "test-runner" }
+compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+compose-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
