@@ -44,5 +44,22 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.hilt.android)
+    annotationProcessor(libs.hilt.android.compiler)
+    annotationProcessor(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
     debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.icons.extended)
+    implementation(libs.compose.navigation)
+    implementation(libs.coil.compose)
+    implementation(libs.ktor.android)
+    androidTestImplementation(libs.test.runner)
+    androidTestImplementation(libs.junit)
+    androidTestImplementation(libs.compose.testing)
+    debugImplementation(libs.compose.test.manifest)
+
+
+    androidTestImplementation(libs.hilt.testing)
+
 }
