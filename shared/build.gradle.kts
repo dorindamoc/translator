@@ -48,6 +48,10 @@ kotlin {
             implementation(libs.ktor.android)
             implementation(libs.sqldelight.android.driver)
         }
+        iosMain.dependencies {
+            implementation(libs.ktor.ios)
+            implementation(libs.sqldelight.native.driver)
+        }
     }
 }
 
