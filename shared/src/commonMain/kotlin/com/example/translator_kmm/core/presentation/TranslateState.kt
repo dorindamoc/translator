@@ -1,7 +1,7 @@
 package com.example.translator_kmm.core.presentation
 
-import com.example.translator_kmm.translate.domain.history.HistoryItem
 import com.example.translator_kmm.translate.domain.translate.TranslateError
+import com.example.translator_kmm.translate.presentation.UiHistoryItem
 
 data class TranslateState(
     val fromText: String = "",
@@ -12,5 +12,5 @@ data class TranslateState(
     val isChoosingFromLanguage: Boolean = false,
     val isChoosingToLanguage: Boolean = false,
     val error: TranslateError? = null,
-    val history: List<HistoryItem> = emptyList()
+    val history: List<UiHistoryItem> = emptyList()
 )

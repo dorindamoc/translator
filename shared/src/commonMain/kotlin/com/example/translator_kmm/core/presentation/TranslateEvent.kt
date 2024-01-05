@@ -14,9 +14,9 @@ sealed class TranslateEvent {
     data object OpenFromLanguageDropdown : TranslateEvent()
     data object OpenToLanguageDropdown : TranslateEvent()
     data object CloseTranslation : TranslateEvent()
-    data class SelectHistoryItem(val historyItem: UiHistoryItem) : TranslateEvent()
+    data class SelectHistoryItem(val item: UiHistoryItem) : TranslateEvent()
     data object EditTranslation : TranslateEvent()
     data object RecordAudio : TranslateEvent()
-    data class SubmitVoiceResult(val result: String) : TranslateEvent()
+    data class SubmitVoiceResult(val result: String?) : TranslateEvent()
     data object OnErrorSeen : TranslateEvent()
 }
