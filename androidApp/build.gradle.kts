@@ -1,6 +1,10 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinSerialization)
+    id("com.android.application")
+    kotlin("android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -41,25 +45,22 @@ android {
 dependencies {
     implementation(projects.shared)
     implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling)
     implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.foundation)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.hilt.android)
-    annotationProcessor(libs.hilt.android.compiler)
-    annotationProcessor(libs.androidx.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
-    debugImplementation(libs.compose.ui.tooling)
-    implementation(libs.compose.foundation)
     implementation(libs.compose.icons.extended)
     implementation(libs.compose.navigation)
     implementation(libs.coil.compose)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.ktor.android)
     androidTestImplementation(libs.test.runner)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.compose.testing)
     debugImplementation(libs.compose.test.manifest)
-
-
-    androidTestImplementation(libs.hilt.testing)
-
+    kaptAndroidTest(libs.hilt.testing)
 }
