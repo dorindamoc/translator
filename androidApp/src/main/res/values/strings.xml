@@ -9,4 +9,9 @@
     <string name="play_loud">Play loud</string>
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="history">History</string>
+    <string name="service_error">A service error happened. Please try again later</string>
+    <string name="client_error">A client error happened. Please contact support</string>
+    <string name="server_error">A server error happened. Please try again later</string>
+    <string name="unknown_error">An error happened.</string>
+    <string name="record_audio">Record audio</string>
 </resources>
