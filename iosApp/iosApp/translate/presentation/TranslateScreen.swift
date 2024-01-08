@@ -7,13 +7,43 @@
 //
 
 import SwiftUI
+import shared
 
 struct TranslateScreen: View {
+    private var historyDataSource: HistoryDataSource
+    private var translateUseCase: Translate
+    @ObservedObject var viewModel: IOSTranslateViewModel
+    
+    init(historyDataSource: HistoryDataSource, translateUseCase: Translate, viewModel: IOSTranslateViewModel) {
+        self.historyDataSource = historyDataSource
+        self.translateUseCase = translateUseCase
+        self.viewModel = IOSTranslateViewModel(historyDataSource: historyDataSource, translateUseCase: translateUseCase)
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            List {
+                HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+                    LanguageDropDown(
+                        language: viewModel.state.fromLanguage,
+                        isOpen: viewModel.state.isChoosingFromLanguage,
+                        selectLanguage: { language in
+                            viewModel.onEvent(event: TranslateEvent.ChooseFromLanguage(language: language))
+                        })
+                    Spacer()
+                    SwapLanguageButton(onClick: {
+                        viewModel.onEvent(event: TranslateEvent.SwapLanguages())
+                    })
+                    Spacer()
+                    LanguageDropDown(
+                        language: viewModel.state.toLanguage,
+                        isOpen: viewModel.state.isChoosingToLanguage,
+                        selectLanguage: { language in
+                            viewModel.onEvent(event: TranslateEvent.ChooseToLanguage(language: language))
+                        })
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    TranslateScreen()
-}

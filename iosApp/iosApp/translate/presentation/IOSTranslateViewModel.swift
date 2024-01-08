@@ -30,7 +30,7 @@ extension TranslateScreen {
         
         private var handle: DisposableHandle?
         
-        init(historyDataSource: HistoryDataSource, translateUseCase: Translate, viewModel: TranslateViewModel) {
+        init(historyDataSource: HistoryDataSource, translateUseCase: Translate) {
             self.historyDataSource = historyDataSource
             self.translateUseCase = translateUseCase
             self.viewModel = TranslateViewModel(translate: translateUseCase, historyDataSource: historyDataSource, coroutineScope: nil)
