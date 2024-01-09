@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		7A8D41492B4C60420008FCD0 /* SwapLanguageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D41482B4C60420008FCD0 /* SwapLanguageButton.swift */; };
 		7A8D414B2B4C65420008FCD0 /* IOSTranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D414A2B4C65420008FCD0 /* IOSTranslateViewModel.swift */; };
 		7A8D414D2B4C65610008FCD0 /* TranslateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D414C2B4C65610008FCD0 /* TranslateScreen.swift */; };
+		7A8D414F2B4D4E9D0008FCD0 /* GradienSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D414E2B4D4E9D0008FCD0 /* GradienSurface.swift */; };
 		E327B86F583700AA4D14C0B0 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A96D16892C33D6764CCD3A /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		7A8D41482B4C60420008FCD0 /* SwapLanguageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapLanguageButton.swift; sourceTree = "<group>"; };
 		7A8D414A2B4C65420008FCD0 /* IOSTranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTranslateViewModel.swift; sourceTree = "<group>"; };
 		7A8D414C2B4C65610008FCD0 /* TranslateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateScreen.swift; sourceTree = "<group>"; };
+		7A8D414E2B4D4E9D0008FCD0 /* GradienSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradienSurface.swift; sourceTree = "<group>"; };
 		9D268C32205FB4513ED9BBE9 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A3602D81D1BF01552CC50E93 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8D413D2B4C4AB30008FCD0 /* Colors.swift */,
+				7A8D414E2B4D4E9D0008FCD0 /* GradienSurface.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8D414F2B4D4E9D0008FCD0 /* GradienSurface.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7A8D41432B4C55790008FCD0 /* LanguageDropDownItem.swift in Sources */,
 				7A8D41452B4C5B380008FCD0 /* LanguageDropDown.swift in Sources */,

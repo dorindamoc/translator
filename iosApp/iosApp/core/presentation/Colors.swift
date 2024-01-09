@@ -28,6 +28,8 @@ extension Color {
     static let accentViolet = Color(hex: colors.AccentViolet)
     static let textBlack = Color(hex: colors.TextBlack)
     static let darkGrey = Color(hex: colors.DarkGrey)
+    static let gradientStart = Color(hex: colors.DarkGradientStart)
+    static let gradientEnd = Color(hex: colors.DarkGradientEnd)
 
     static let primaryColor = Color(light: .accentViolet, dark: .accentViolet)
     static let onPrimary = Color(light: .lightBlueGrey, dark: .darkGrey)
