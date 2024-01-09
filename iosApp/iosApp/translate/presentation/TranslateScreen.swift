@@ -14,7 +14,7 @@ struct TranslateScreen: View {
     private var translateUseCase: Translate
     @ObservedObject var viewModel: IOSTranslateViewModel
     
-    init(historyDataSource: HistoryDataSource, translateUseCase: Translate, viewModel: IOSTranslateViewModel) {
+    init(historyDataSource: HistoryDataSource, translateUseCase: Translate) {
         self.historyDataSource = historyDataSource
         self.translateUseCase = translateUseCase
         self.viewModel = IOSTranslateViewModel(historyDataSource: historyDataSource, translateUseCase: translateUseCase)
@@ -42,7 +42,17 @@ struct TranslateScreen: View {
                             viewModel.onEvent(event: TranslateEvent.ChooseToLanguage(language: language))
                         })
                 }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.background)
             }
+            .listStyle(.plain)
+            .buttonStyle(.plain)
+        }
+        .onAppear {
+            viewModel.startObserving()
+        }
+        .onDisappear {
+            viewModel.dispose()
         }
     }
 }
