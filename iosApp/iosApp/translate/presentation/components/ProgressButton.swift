@@ -30,7 +30,7 @@ struct ProgressButton: View {
                     .padding(.vertical, 5)
                     .font(.body.weight(.bold))
                     .background(Color.primaryColor)
-                    .foregroundColor(Color.onPrimary)
+                    .foregroundColor(Color.onSurface)
                     .cornerRadius(100)
                 
             }

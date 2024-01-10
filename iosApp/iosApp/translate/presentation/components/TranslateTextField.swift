@@ -76,6 +76,7 @@ private extension TranslateTextField {
                     minHeight: 200,
                     alignment: .topLeading
                 )
+                .scrollContentBackground(.hidden)
                 .padding()
                 .foregroundColor(Color.onSurface)
                 .overlay(alignment: .bottomTrailing) {
