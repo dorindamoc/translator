@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import android.speech.SpeechRecognizer.ERROR_CLIENT
 import com.example.translator_kmm.android.R
 import com.example.translator_kmm.core.domain.util.CommonStateFlow
 import com.example.translator_kmm.core.domain.util.toCommonStateFlow
@@ -30,7 +31,10 @@ class AndroidVoiceToTextParser(
         }
 
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-            putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            putExtra(
+                RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+            )
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, languageCode)
         }
         recognizer.setRecognitionListener(this)
@@ -64,10 +68,13 @@ class AndroidVoiceToTextParser(
     override fun onBufferReceived(p0: ByteArray?) = Unit
 
     override fun onEndOfSpeech() {
-        _state.update { it.copy(isSpeaking = false  ) }
+        _state.update { it.copy(isSpeaking = false) }
     }
 
     override fun onError(code: Int) {
+        if (code == ERROR_CLIENT) {
+            return
+        }
         _state.update { it.copy(error = "Error: $code") }
     }
 
