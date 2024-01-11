@@ -58,7 +58,7 @@ class AndroidVoiceToTextParser(
     override fun onBeginningOfSpeech() = Unit
     override fun onRmsChanged(rmsDb: Float) {
         // Normalizing data to 0-1 range
-        _state.update { it.copy(powerRation = rmsDb * (1f / (12f - (-2f)))) }
+        _state.update { it.copy(powerRatio = rmsDb * (1f / (12f - (-2f)))) }
     }
 
     override fun onBufferReceived(p0: ByteArray?) = Unit
