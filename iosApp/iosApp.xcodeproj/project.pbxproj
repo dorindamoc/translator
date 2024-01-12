@@ -24,6 +24,7 @@
 		7A8D41552B4D58A20008FCD0 /* TranslateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D41542B4D58A20008FCD0 /* TranslateTextField.swift */; };
 		7A8D41572B4E86A30008FCD0 /* TextToSpeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D41562B4E86A30008FCD0 /* TextToSpeach.swift */; };
 		7A8D41592B4E89F50008FCD0 /* TranslateHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D41582B4E89F50008FCD0 /* TranslateHistoryItem.swift */; };
+		7A8D415D2B5154AA0008FCD0 /* MicrophonePowerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D415C2B5154AA0008FCD0 /* MicrophonePowerObserver.swift */; };
 		E327B86F583700AA4D14C0B0 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A96D16892C33D6764CCD3A /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		7A8D41542B4D58A20008FCD0 /* TranslateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTextField.swift; sourceTree = "<group>"; };
 		7A8D41562B4E86A30008FCD0 /* TextToSpeach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeach.swift; sourceTree = "<group>"; };
 		7A8D41582B4E89F50008FCD0 /* TranslateHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHistoryItem.swift; sourceTree = "<group>"; };
+		7A8D415C2B5154AA0008FCD0 /* MicrophonePowerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePowerObserver.swift; sourceTree = "<group>"; };
 		9D268C32205FB4513ED9BBE9 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A3602D81D1BF01552CC50E93 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				7A8D415A2B51546B0008FCD0 /* voice_to_text */,
 				7A8D413F2B4C55240008FCD0 /* translate */,
 				7A8D413B2B4C4A4D0008FCD0 /* core */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
@@ -170,6 +173,22 @@
 				7A8D41582B4E89F50008FCD0 /* TranslateHistoryItem.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		7A8D415A2B51546B0008FCD0 /* voice_to_text */ = {
+			isa = PBXGroup;
+			children = (
+				7A8D415B2B51548B0008FCD0 /* data */,
+			);
+			path = voice_to_text;
+			sourceTree = "<group>";
+		};
+		7A8D415B2B51548B0008FCD0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7A8D415C2B5154AA0008FCD0 /* MicrophonePowerObserver.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8D41532B4D560F0008FCD0 /* ProgressButton.swift in Sources */,
+				7A8D415D2B5154AA0008FCD0 /* MicrophonePowerObserver.swift in Sources */,
 				7A8D414F2B4D4E9D0008FCD0 /* GradienSurface.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7A8D41432B4C55790008FCD0 /* LanguageDropDownItem.swift in Sources */,
