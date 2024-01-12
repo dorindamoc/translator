@@ -11,7 +11,7 @@ import shared
 import Speech
 import Combine
 
-class MicrphonePowerObserver: ObservableObject {
+class MicrophonePowerObserver: ObservableObject {
     private var cancellable: AnyCancellable? = nil
     private var audioRecorder: AVAudioRecorder? = nil
     
@@ -58,7 +58,7 @@ class MicrphonePowerObserver: ObservableObject {
     }
     func release() {
         self.cancellable = nil
-        audioRecorder.stop()
+        audioRecorder?.stop()
         audioRecorder = nil
         
         self.micPowerRatio = 0.0
